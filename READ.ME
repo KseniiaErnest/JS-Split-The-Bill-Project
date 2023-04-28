@@ -1,0 +1,109 @@
+### HTML
+1. We create a big <dev></dev> that will hold all the elements. It has an id container.
+2. Inside we put: <h1>Heading</h1>, <p>Bill</p>, <span></span> and <input> id bill,  again <p>Number of people</p>, <input> id people, <p>Did you like our service</p>,
+<button></button> id addTip. (later we chnge so input was inside <span></span>)
+3. Here we update our html by put everything inside <form></form>.
+4. Then going back to our button, after it we add <select></select>: id tip. Inside we put several options: <option></option> * 5. The first one is <select disabled> Select an option </select>. The last is <select selected>
+5. Add one more <button>Calculate</button> id btn.
+6. After </form> we add <div></div> id showTotalAmountToPay. 
+7. Inside <div></div> we add <div></div> id billSplit which contains <p>Bill</p> and <span>$</span> and <span></span> id devidedBill, <span>per person</span>;
+Now we add another two <div></div>:
+ <div></div> id totalTip which contains <p>Tip</p> and <span>$</span> and <span></span> id devidedTip, <span>per person</span>;
+ <div></div> id totalAmount which contains <p>Total</p> and <span>$</span> and <span></span> id billAndTip, <span>per person</span>;
+
+### CSS
+ 1.
+body {
+background-image: url("https://images.unsplash.com/photo-1600628421066-f6bda6a7b976?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZvb2QlMjBmcmllbmRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-color:rgba(94, 97, 93, 0.9);
+}
+
+2. #container {
+background-color:rgba(94, 97, 93, 0.9);
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+width: 600px;
+height: 725px;
+border-radius: 40px;
+color: white;
+}
+
+3. Google fonts - Montserrat 500
+4. Form {
+  display: flex;
+  flex-direction: column;
+  font-family:
+  gap: 20px;
+  padding: 20px;
+
+}
+
+5. h1 {
+  color:
+  align-self: center;
+}
+
+6. input {
+  font-family:
+  padding: 5px;
+}
+
+7. #addTip {
+background-color:#78DEC7;
+border: none;
+border-radius: 10px;
+padding: 5px;
+font-family: 'Montserrat', sans-serif;
+
+}
+
+#btn {
+background-color: #F7DBF0;
+padding: 10px;
+border-radius: 10px;
+border: none;
+margin-top: 10px;
+font-family: 'Montserrat', sans-serif;
+}
+
+8. #tip {
+  font-family:
+  display: none;
+}
+
+9. #showTotalAmountToPay {
+  display: flex;
+
+}
+
+10. #billSplit, #totalTip, #totalAmount {
+  font-family:
+  background-color:
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid black
+}
+
+
+### JS
+// 1. We start from the logic for the button _Calculate_ and get the access to it.
+
+// 2. Then we need to addEventLister on so the event could happen and inside we put function that will be responsible for the logic of the button calculate.
+button.addEventListener('click', calculateAmount);
+
+// 3. function calculateAmount() :
+  // we need an access to _Bill_ input field value and _How many people_ input field vale and _tips_ input field value
+  // 4. We need to take into consideration that an user might forget to put values into our input field so we need alert()
+  // 5. Create a varible that contains calculation for amountPerPerson bill, and that variable data will be displayed at our container _Bill_
+  // 6. Create a variable that contains _tipPerPerson_, but before we need to go to html <option></option>, we add value = "0.30", value = "0.20", value = "0.10", value = "0.00"
+  // 7. Create a variable that contains total amount
+// 8. Now we need to display those variables. We have our empty <span></span>s.  
+// Add cents using method .toFixed()
+
+// 9. Work on tip button selection tips. We get access to tip button, then addEventLister and write function _showTip_
+function showTip(e) 
