@@ -4,9 +4,69 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <title>Lets Split The Bill</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+
+  <div id="container">
+<form>
+    <h1>Let's Split Our Bill</h1>
+    <p>Bill 💰</p>
+    <span>$<input type="text" placeholder="Bill" id="bill"></span>
+
+    <p>😎 Number of people</p>
+    <span><input type="text" placeholder="How many people?" id="people"></span>
+
+    <p>💗Did you like our service?💗</p>
+    <button id="addTip">Add a Tip</button>
+    <select id="tip">
+      <option disabled>Select an option</option>
+      <option value="0.30">Wow! 30%💗</option>
+      <option value="0.20">Good service! 20% 💙</option>
+      <option value="0.10">It was OK! 10% 🙂</option>
+      <option value="0.00" selected>No tip!🙅‍</option>
+    </select>
+    <button id="btn">Calculate</button>
+
+  </form>
+
+  <div id="showTotalAmountToPay">
+
+    <div id="billSplit">
+      <p>Bill</p>
+      <span id="devidedBill"></span>
+      <span>$</span>
+      <span>per person</span>
+    </div>
+
+    <div id="totalTip">
+      <p>Tip</p>
+      <span id="devidedTip"></span>
+      <span>$</span>
+      <span>per person</span>
+    </div>
+
+    <div id="totalAmount">
+      <p>Total</p>
+      <span id="billAndTip"></span>
+      <span>$</span>
+      <span>per person</span>
+    </div>
+
+
+  </div>
+
+
+
+
+  </div>
+
+
+
+<script src="script.js"></script> 
 </body>
 </html>
